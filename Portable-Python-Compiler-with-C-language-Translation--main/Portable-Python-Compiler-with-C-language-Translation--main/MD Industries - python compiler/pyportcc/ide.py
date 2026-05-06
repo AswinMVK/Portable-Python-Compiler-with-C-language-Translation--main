@@ -1,6 +1,6 @@
 """
 MD INDUSTRIES
-Developer: M.DHANESVARAN
+True Developer: M.Aswin
 Batman-themed local IDE for the portable Python subset compiler.
 """
 
