@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4efe5"/>
+      <stop offset="100%" stop-color="#d9e6f2"/>
+    </linearGradient>
+    <linearGradient id="stage" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f4b99"/>
+      <stop offset="100%" stop-color="#2f7f6f"/>
+    </linearGradient>
+    <linearGradient id="artifact" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fffaf2"/>
+      <stop offset="100%" stop-color="#f5f0e7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1d2b3a" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#23415f"/>
+    </marker>
+    <style>
+      .title { font: 700 40px Georgia, serif; fill: #17212b; }
+      .subtitle { font: 500 20px Georgia, serif; fill: #32485f; }
+      .box-title { font: 700 25px Georgia, serif; fill: white; }
+      .box-text { font: 500 18px Georgia, serif; fill: #18324a; }
+      .box-small { font: 500 16px Georgia, serif; fill: #35516c; }
+      .artifact-title { font: 700 22px Georgia, serif; fill: #203245; }
+      .artifact-text { font: 500 16px Georgia, serif; fill: #425c74; }
+      .footer { font: 500 18px Georgia, serif; fill: #24384c; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1520" height="900" rx="30" fill="#ffffff" opacity="0.82"/>
+
+  <text x="80" y="110" class="title">MiniC Compiler Architecture</text>
+  <text x="80" y="145" class="subtitle">MD INDUSTRIES | Developer: M.DHANESVARAN | C-subset source to native executable</text>
+
+  <rect x="80" y="200" width="210" height="92" rx="18" fill="url(#artifact)" stroke="#c9b89b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="105" y="240" class="artifact-title">Source Program</text>
+  <text x="105" y="268" class="artifact-text">MiniC `.c` input file</text>
+
+  <rect x="350" y="180" width="260" height="130" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="382" y="228" class="box-title">1. Lexical Analysis</text>
+  <text x="382" y="258" class="box-small">Flex / Lex scanner</text>
+  <text x="382" y="286" class="box-small">keywords, identifiers, numbers,</text>
+  <text x="382" y="308" class="box-small">operators and delimiters</text>
+
+  <rect x="680" y="180" width="260" height="130" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="726" y="228" class="box-title">2. Parsing</text>
+  <text x="712" y="258" class="box-small">Bison / YACC grammar</text>
+  <text x="712" y="286" class="box-small">syntax validation and</text>
+  <text x="712" y="308" class="box-small">reduction into productions</text>
+
+  <rect x="1010" y="180" width="260" height="130" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="1038" y="228" class="box-title">3. AST Construction</text>
+  <text x="1042" y="258" class="box-small">C structures for program,</text>
+  <text x="1042" y="286" class="box-small">statements, expressions,</text>
+  <text x="1042" y="308" class="box-small">and operator nodes</text>
+
+  <rect x="200" y="430" width="280" height="150" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="232" y="478" class="box-title">4. Semantic Analysis</text>
+  <text x="232" y="510" class="box-small">symbol table management</text>
+  <text x="232" y="536" class="box-small">declaration-before-use</text>
+  <text x="232" y="562" class="box-small">redeclaration and assignment checks</text>
+
+  <rect x="560" y="430" width="300" height="150" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="590" y="478" class="box-title">5. LLVM IR Generation</text>
+  <text x="590" y="510" class="box-small">textual IR emitter in C</text>
+  <text x="590" y="536" class="box-small">stack allocation, arithmetic,</text>
+  <text x="590" y="562" class="box-small">`printf` calls, and return values</text>
+
+  <rect x="940" y="430" width="240" height="150" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="984" y="478" class="box-title">6. llc Backend</text>
+  <text x="972" y="510" class="box-small">LLVM IR lowered to</text>
+  <text x="972" y="536" class="box-small">assembly or object code</text>
+
+  <rect x="1240" y="430" width="250" height="150" rx="24" fill="url(#stage)" filter="url(#shadow)"/>
+  <text x="1276" y="478" class="box-title">7. Native Linker</text>
+  <text x="1276" y="510" class="box-small">clang / gcc links runtime</text>
+  <text x="1276" y="536" class="box-small">and builds executable</text>
+
+  <rect x="1220" y="700" width="270" height="96" rx="18" fill="url(#artifact)" stroke="#c9b89b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1260" y="742" class="artifact-title">Native Executable</text>
+  <text x="1270" y="770" class="artifact-text">`.exe` or platform binary</text>
+
+  <rect x="90" y="680" width="500" height="180" rx="24" fill="#f6fbff" stroke="#96b3ca" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="725" class="artifact-title">Repository Layout</text>
+  <text x="120" y="758" class="artifact-text">src/     lexer, parser, AST, semantics, codegen, driver</text>
+  <text x="120" y="788" class="artifact-text">docs/    architecture, report, screenshots</text>
+  <text x="120" y="818" class="artifact-text">test/    sample DSL programs and validation cases</text>
+  <text x="120" y="848" class="artifact-text">output/  LLVM IR, assembly, executables, run results</text>
+
+  <rect x="650" y="680" width="450" height="180" rx="24" fill="#fff8f2" stroke="#c9b89b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="725" class="artifact-title">Core Data Flow</text>
+  <text x="680" y="758" class="artifact-text">Token Stream -> Parse Tree Actions -> AST -> Symbol Validation</text>
+  <text x="680" y="788" class="artifact-text">AST -> LLVM IR -> llc -> Assembly/Object -> Linker -> Binary</text>
+  <text x="680" y="818" class="artifact-text">Designed for static compilation and reproducible output</text>
+
+  <line x1="290" y1="246" x2="350" y2="246" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="610" y1="246" x2="680" y2="246" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="940" y1="246" x2="1010" y2="246" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M1140 310 C1140 380, 350 360, 350 430" fill="none" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="480" y1="505" x2="560" y2="505" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="860" y1="505" x2="940" y2="505" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1180" y1="505" x2="1240" y2="505" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M1365 580 C1365 640, 1355 655, 1355 700" fill="none" stroke="#23415f" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <text x="80" y="910" class="footer">Reference asset prepared for documentation, report inclusion, and repository presentation.</text>
+</svg>
