@@ -1,6 +1,6 @@
 """
-MD INDUSTRIES
-Developer: M.DHANESVARAN
+ASWIN'S PYTHON COMPILER
+Developer: Aswin
 Portable verification for the Python subset compiler.
 """
 

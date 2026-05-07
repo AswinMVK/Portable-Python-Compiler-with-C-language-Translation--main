@@ -1,6 +1,6 @@
-# MD INDUSTRIES
+# ASWIN'S PYTHON COMPILER
 
-Developer: `M.DHANESVARAN`
+Developer: `Aswin`
 
 ## Portable Build Strategy
 

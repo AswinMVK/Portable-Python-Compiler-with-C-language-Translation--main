@@ -1,6 +1,6 @@
 """
-MD INDUSTRIES
-Developer: M.DHANESVARAN
+ASWIN'S PYTHON COMPILER
+Developer: Aswin
 Portable Python subset compiler.
 """
 

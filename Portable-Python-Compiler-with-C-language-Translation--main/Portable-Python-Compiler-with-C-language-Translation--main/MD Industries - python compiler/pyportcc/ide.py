@@ -1,7 +1,7 @@
 """
-MD INDUSTRIES
-True Developer: M.Aswin
-Batman-themed local IDE for the portable Python subset compiler.
+ASWIN'S PYTHON COMPILER
+Developer: Aswin
+Modern local IDE for the portable Python subset compiler.
 """
 
 from __future__ import annotations
@@ -15,12 +15,12 @@ from .compiler import CompileError, ExecutionError, compile_source, execute_sour
 
 
 ROOT = Path(__file__).resolve().parent.parent
-DEVELOPER_NAME = "M.DHANESVARAN"
-COMPANY_NAME = "MD INDUSTRIES"
-CONTACT_EMAIL = "dhanesvarankumaran2006@gmail.com"
-GITHUB_URL = "https://github.com/DHANESVARAN"
-WEBSITE_URL = "https://dhanesvarankumaran.wixsite.com/dhanesvaran"
-LINKEDIN_URL = "https://www.linkedin.com/in/dhanesvaran-m-774ab426b/"
+DEVELOPER_NAME = "Aswin"
+COMPANY_NAME = "Aswin's Python Compiler"
+CONTACT_EMAIL = "aswin@pythoncompiler.com"
+GITHUB_URL = "https://github.com/aswin"
+WEBSITE_URL = "https://pythoncompiler.aswin"
+LINKEDIN_URL = "https://www.linkedin.com/in/aswin"
 DEFAULT_SOURCE = """x = 10
 y = 20
 x = x + y * 2
@@ -40,13 +40,13 @@ else:
 """
 
 
-class BatmanIDE:
+class SupermanIDE:
     def __init__(self) -> None:
         self.root = tk.Tk()
-        self.root.title("PyPortCC IDE | Gotham Mode")
+        self.root.title("PyPortCC IDE | Modern Mode")
         self.root.geometry("1280x820")
         self.root.minsize(1000, 680)
-        self.root.configure(bg="#070707")
+        self.root.configure(bg="#1a1a1a")
 
         self.current_file: Path | None = None
         self.output_file: Path | None = None
@@ -54,47 +54,47 @@ class BatmanIDE:
         self._configure_style()
         self._build_layout()
         self.source_editor.insert("1.0", DEFAULT_SOURCE)
-        self.status_var.set("Gotham console ready. Load code or compile the sample program.")
+        self.status_var.set("Console ready. Load code or compile the sample program.")
 
     def _configure_style(self) -> None:
         style = ttk.Style()
         style.theme_use("clam")
-        style.configure("Batman.TFrame", background="#070707")
-        style.configure("Panel.TFrame", background="#111111")
-        style.configure("Hero.TLabel", background="#070707", foreground="#f5c400", font=("Segoe UI", 22, "bold"))
-        style.configure("Sub.TLabel", background="#070707", foreground="#f8e58c", font=("Segoe UI", 10))
-        style.configure("Brand.TLabel", background="#070707", foreground="#f5c400", font=("Segoe UI", 10, "bold"))
-        style.configure("PanelTitle.TLabel", background="#111111", foreground="#f5c400", font=("Consolas", 12, "bold"))
-        style.configure("Footer.TFrame", background="#0d0d0d")
-        style.configure("Footer.TLabel", background="#0d0d0d", foreground="#f8e58c", font=("Segoe UI", 9))
-        style.configure("Link.TLabel", background="#0d0d0d", foreground="#f5c400", font=("Segoe UI", 9, "underline"))
-        style.configure("Status.TLabel", background="#0d0d0d", foreground="#f5c400", font=("Consolas", 10))
+        style.configure("Superman.TFrame", background="#1a1a1a")
+        style.configure("Panel.TFrame", background="#2a2a2a")
+        style.configure("Hero.TLabel", background="#1a1a1a", foreground="#ffffff", font=("Segoe UI", 22, "bold"))
+        style.configure("Sub.TLabel", background="#1a1a1a", foreground="#e0e0e0", font=("Segoe UI", 10))
+        style.configure("Brand.TLabel", background="#1a1a1a", foreground="#ffffff", font=("Segoe UI", 10, "bold"))
+        style.configure("PanelTitle.TLabel", background="#2a2a2a", foreground="#22c55e", font=("Consolas", 12, "bold"))
+        style.configure("Footer.TFrame", background="#1a1a1a")
+        style.configure("Footer.TLabel", background="#1a1a1a", foreground="#e0e0e0", font=("Segoe UI", 9))
+        style.configure("Link.TLabel", background="#1a1a1a", foreground="#22c55e", font=("Segoe UI", 9, "underline"))
+        style.configure("Status.TLabel", background="#1a1a1a", foreground="#22c55e", font=("Consolas", 10))
         style.configure(
-            "Batman.TButton",
-            background="#f5c400",
-            foreground="#070707",
+            "Superman.TButton",
+            background="#22c55e",
+            foreground="#ffffff",
             borderwidth=0,
             focusthickness=0,
             padding=(14, 8),
             font=("Segoe UI", 10, "bold"),
         )
         style.map(
-            "Batman.TButton",
-            background=[("active", "#ffd84d"), ("pressed", "#d9ab00")],
-            foreground=[("disabled", "#4a4a4a")],
+            "Superman.TButton",
+            background=[("active", "#16a34a"), ("pressed", "#15803d")],
+            foreground=[("disabled", "#6a6a6a")],
         )
 
     def _build_layout(self) -> None:
-        shell = ttk.Frame(self.root, style="Batman.TFrame", padding=20)
+        shell = ttk.Frame(self.root, style="Superman.TFrame", padding=20)
         shell.pack(fill="both", expand=True)
 
-        header = ttk.Frame(shell, style="Batman.TFrame")
+        header = ttk.Frame(shell, style="Superman.TFrame")
         header.pack(fill="x")
 
-        ttk.Label(header, text="BATCAVE COMPILER IDE", style="Hero.TLabel").pack(anchor="w")
+        ttk.Label(header, text="ASWIN'S COMPILER IDE", style="Hero.TLabel").pack(anchor="w")
         ttk.Label(
             header,
-            text="Dark-themed local IDE for the restricted Python compiler. Source on the left, generated C on the right.",
+            text="Modern local IDE for the restricted Python compiler. Source on the left, generated C on the right.",
             style="Sub.TLabel",
         ).pack(anchor="w", pady=(4, 14))
         ttk.Label(
@@ -103,7 +103,7 @@ class BatmanIDE:
             style="Brand.TLabel",
         ).pack(anchor="w", pady=(0, 14))
 
-        actions = ttk.Frame(shell, style="Batman.TFrame")
+        actions = ttk.Frame(shell, style="Superman.TFrame")
         actions.pack(fill="x", pady=(0, 14))
 
         for label, handler in [
@@ -115,9 +115,9 @@ class BatmanIDE:
             ("Load Sample", self.load_sample),
             ("Clear Log", self.clear_log),
         ]:
-            ttk.Button(actions, text=label, command=handler, style="Batman.TButton").pack(side="left", padx=(0, 10))
+            ttk.Button(actions, text=label, command=handler, style="Superman.TButton").pack(side="left", padx=(0, 10))
 
-        panes = ttk.Frame(shell, style="Batman.TFrame")
+        panes = ttk.Frame(shell, style="Superman.TFrame")
         panes.pack(fill="both", expand=True)
         panes.columnconfigure(0, weight=1)
         panes.columnconfigure(1, weight=1)
@@ -130,7 +130,7 @@ class BatmanIDE:
         self.source_editor = self._make_textbox(source_panel)
         self.source_editor.pack(fill="both", expand=True)
 
-        right_panel = ttk.Frame(panes, style="Batman.TFrame")
+        right_panel = ttk.Frame(panes, style="Superman.TFrame")
         right_panel.grid(row=0, column=1, sticky="nsew", pady=(0, 10))
         right_panel.rowconfigure(0, weight=2)
         right_panel.rowconfigure(1, weight=1)
@@ -179,16 +179,16 @@ class BatmanIDE:
         return label
 
     def _make_textbox(self, parent: ttk.Frame, height: int | None = None, readonly: bool = False) -> tk.Text:
-        frame = tk.Frame(parent, bg="#111111", highlightbackground="#f5c400", highlightcolor="#f5c400", highlightthickness=1)
+        frame = tk.Frame(parent, bg="#2a2a2a", highlightbackground="#22c55e", highlightcolor="#22c55e", highlightthickness=1)
         frame.pack_propagate(False)
         text = tk.Text(
             frame,
             wrap="none",
-            bg="#0b0b0b",
-            fg="#f3e7a2",
-            insertbackground="#f5c400",
-            selectbackground="#2c2c2c",
-            selectforeground="#f5c400",
+            bg="#1a1a1a",
+            fg="#ffffff",
+            insertbackground="#22c55e",
+            selectbackground="#3a3a3a",
+            selectforeground="#22c55e",
             relief="flat",
             font=("Consolas", 11),
             undo=True,
@@ -196,8 +196,8 @@ class BatmanIDE:
             pady=12,
             height=height or 20,
         )
-        y_scroll = tk.Scrollbar(frame, orient="vertical", command=text.yview, bg="#111111", troughcolor="#0b0b0b", activebackground="#f5c400")
-        x_scroll = tk.Scrollbar(frame, orient="horizontal", command=text.xview, bg="#111111", troughcolor="#0b0b0b", activebackground="#f5c400")
+        y_scroll = tk.Scrollbar(frame, orient="vertical", command=text.yview, bg="#2a2a2a", troughcolor="#1a1a1a", activebackground="#22c55e")
+        x_scroll = tk.Scrollbar(frame, orient="horizontal", command=text.xview, bg="#2a2a2a", troughcolor="#1a1a1a", activebackground="#22c55e")
         text.configure(yscrollcommand=y_scroll.set, xscrollcommand=x_scroll.set)
         text.grid(row=0, column=0, sticky="nsew")
         y_scroll.grid(row=0, column=1, sticky="ns")
@@ -326,4 +326,4 @@ class BatmanIDE:
 
 
 def launch_ide() -> None:
-    BatmanIDE().run()
+    SupermanIDE().run()

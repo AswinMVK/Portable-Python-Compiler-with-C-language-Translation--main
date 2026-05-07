@@ -16,7 +16,7 @@ Use the command set that matches your machine:
 
 ## Coding Style & Naming Conventions
 
-Use C99-compatible code, 4-space indentation, and ASCII-only source unless a file already requires otherwise. Keep functions small and stage-specific. Use lowercase snake_case for C functions (`semantic_analyze`), lowercase filenames for C modules (`symbol_table.c`), and uppercase token names in Flex/Bison (`INT`, `RETURN`, `PRINTF`). Preserve the file header identifying `MD INDUSTRIES` and `M.DHANESVARAN`.
+Use C99-compatible code, 4-space indentation, and ASCII-only source unless a file already requires otherwise. Keep functions small and stage-specific. Use lowercase snake_case for C functions (`semantic_analyze`), lowercase filenames for C modules (`symbol_table.c`), and uppercase token names in Flex/Bison (`INT`, `RETURN`, `PRINTF`). Preserve the file header identifying `ASWIN'S PYTHON COMPILER` and `Aswin`.
 
 ## Testing Guidelines
 

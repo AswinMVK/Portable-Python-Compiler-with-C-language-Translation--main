@@ -1,6 +1,6 @@
 """
-MD INDUSTRIES
-Developer: M.DHANESVARAN
+ASWIN'S PYTHON COMPILER
+Developer: Aswin
 CLI entry point for the portable Python subset compiler.
 """
 
@@ -21,7 +21,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--ide",
         action="store_true",
-        help="Launch the Batman-themed desktop IDE.",
+        help="Launch the modern desktop IDE.",
     )
     parser.add_argument("input", nargs="?", help="Path to the input Python source file.")
     parser.add_argument("output", nargs="?", help="Path to the output C file.")

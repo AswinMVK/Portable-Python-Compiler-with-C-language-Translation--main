@@ -1,6 +1,6 @@
 <!--
-  MD INDUSTRIES
-  Developer: M.DHANESVARAN
+  ASWIN'S PYTHON COMPILER
+  Developer: Aswin
   Project: Portable Python Subset Compiler
 -->
 
@@ -55,7 +55,7 @@ powershell -ExecutionPolicy Bypass -File scripts/test_portable.ps1
 
 ## Run The IDE
 
-Launch the Batman-themed dark IDE:
+Launch the modern IDE:
 
 ```powershell
 python -m pyportcc --ide

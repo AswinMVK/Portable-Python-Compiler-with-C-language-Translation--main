@@ -1,4 +1,4 @@
-<!-- MD INDUSTRIES | Developer: M.DHANESVARAN -->
+<!-- ASWIN'S PYTHON COMPILER | Developer: Aswin -->
 
 # Compiler Architecture
 

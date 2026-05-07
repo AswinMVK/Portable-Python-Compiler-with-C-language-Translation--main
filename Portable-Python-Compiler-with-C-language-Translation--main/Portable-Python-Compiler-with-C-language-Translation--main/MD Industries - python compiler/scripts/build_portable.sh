@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # MD INDUSTRIES
-# Developer: M.DHANESVARAN
+# Developer: Aswin
 
 set -eu
 

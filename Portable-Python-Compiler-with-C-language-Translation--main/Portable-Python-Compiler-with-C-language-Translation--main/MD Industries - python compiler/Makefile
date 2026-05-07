@@ -1,5 +1,5 @@
-## MD INDUSTRIES
-## Developer: M.DHANESVARAN
+## ASWIN'S PYTHON COMPILER
+## Developer: Aswin
 ## Portable Python Subset Compiler
 
 PYTHON ?= python
